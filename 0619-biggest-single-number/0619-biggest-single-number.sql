@@ -1,9 +1,9 @@
 # Write your MySQL query statement below
-select 
-distinct(select (num)
-from MyNumbers
-group by num
-having count(*) = 1
-order by num desc
-limit 1) as num
-from MyNumbers
+SELECT (
+    SELECT num
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(*) = 1
+    ORDER BY num DESC
+    LIMIT 1
+) AS num;
